@@ -10,6 +10,6 @@ const exerciseSchema = new Schema({
     timestamps: true,
 });
 
+// export model
 const Exercise = mongoose.model('Exercise', exerciseSchema);
-
 module.exports = Exercise;
