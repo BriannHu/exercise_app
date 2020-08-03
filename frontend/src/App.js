@@ -2,15 +2,24 @@ import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavigationBar from './components/navbar'
+import NavigationBar from './components/navbar.component';
+import CreateUser from './components/create-user.component';
+import CreateExercise from './components/create-exercise.component';
+import ExercisesList from './components/exercises-list.component';
+import EditExercise from './components/edit-exercise.component';
 
 function App() {
   return (
     <Router>
-      <NavigationBar />
-      <h1>Hello</h1>
+      <div className='container'>
+        <NavigationBar />
+        <br />
+        <Route path="/" exact component={ExercisesList} />
+        <Route path="/edit/:id" exact component={EditExercise} />
+        <Route path="/create" exact component={CreateExercise} />
+        <Route path="/user" exact component={CreateUser} />
+      </div>
     </Router>
-    
   );
 }
 
