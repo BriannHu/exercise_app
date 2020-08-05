@@ -15,13 +15,42 @@ TYPES OF EXERCISE:
     -> Stretch
     -> Balance
 
+WEB ROUTES:
+
+localhost:5000/exercises                   VIEW ALL EXERCISES
+
+localhost:5000/exercises/aerobic
+localhost:5000/exercises/aerobic/add
+localhost:5000/exercises/aerobic/update
+
+localhost:5000/exercises/strength
+localhost:5000/exercises/strength/add
+localhost:5000/exercises/strength/update
+
+localhost:5000/exercises/stretch
+localhost:5000/exercises/stretch/add
+localhost:5000/exercises/stretch/update
+
+localhost:5000/exercises/balance
+localhost:5000/exercises/balance/add
+localhost:5000/exercises/balance/update
+
+
 
 AEROBIC EXERCISE (Running, swimming, biking)
 
 USER INPUT:
+-> username
+-> activity
 -> duration (mins)
--> distance (km) 
+-> distance (km)
+-> indoors/outdoors
 
+IF INDOORS:
+-> treadmill speed (km/hr)
+
+IF OUTDOORS: 
+-> weather/temperature (C)
 
 APP OUTPUT:
 -> pace (mins/km)
