@@ -1,0 +1,30 @@
+--- USER INFO ---
+
+-> Username
+-> Age
+-> Male/Female
+-> Weight (kg)
+-> Height (cm)
+
+
+--- EXERCISE INFO ---
+
+TYPES OF EXERCISE:
+    -> Aerobic 
+    -> Strength
+    -> Stretch
+    -> Balance
+
+
+AEROBIC EXERCISE (Running, swimming, biking)
+
+USER INPUT:
+-> duration (mins)
+-> distance (km) 
+
+
+APP OUTPUT:
+-> pace (mins/km)
+-> calories burnt = Duration (in minutes)*(MET*3.5*weight in kg)/200
+    -> MET = Metabolic Equivalent for Task (depends on exercise, default set to 5)
+
