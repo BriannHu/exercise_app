@@ -10,6 +10,11 @@ const userSchema = new Schema({
         minlength: 3,
         maxlength: 20,
     },
+    age: {type: Number, required: true},
+    gender: {type: String, required: true},
+    weight: {type: Number, required: true},
+    height: {type: Number, required: true}
+
 }, {
     timestamps: true,
 });
