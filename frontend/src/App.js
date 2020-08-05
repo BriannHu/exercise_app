@@ -11,14 +11,15 @@ import EditExercise from './components/edit-exercise.component';
 function App() {
   return (
     <Router>
+      <NavigationBar />
       <div className='container'>
-        <NavigationBar />
         <br />
         <Route path="/" exact component={ExercisesList} />
         <Route path="/edit/:id" exact component={EditExercise} />
         <Route path="/create" exact component={CreateExercise} />
         <Route path="/user" exact component={CreateUser} />
       </div>
+      
     </Router>
   );
 }
