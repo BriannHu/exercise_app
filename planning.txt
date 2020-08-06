@@ -15,25 +15,44 @@ TYPES OF EXERCISE:
     -> Stretch
     -> Balance
 
+
 WEB ROUTES:
 
-localhost:5000/exercises                   VIEW ALL EXERCISES
+--------------------------------
+VIEW ALL EXERCISES (GENERAL VIEW)
+--------------------------------
+localhost:5000/exercises
 
+TABLE VIEW:
+
+================================================
+| Username | Category | Acitivity |    Date    |
+================================================
+| Brian    | Aerobic  | Running   | 08-04-2020 | 
+
+
+-----------------
+AEROBIC EXERCISES
+-----------------
 localhost:5000/exercises/aerobic
+localhost:5000/exercises/aerobic/:id
 localhost:5000/exercises/aerobic/add
-localhost:5000/exercises/aerobic/update
+localhost:5000/exercises/aerobic/update/:id
 
 localhost:5000/exercises/strength
+localhost:5000/exercises/strength/:id
 localhost:5000/exercises/strength/add
-localhost:5000/exercises/strength/update
+localhost:5000/exercises/strength/update/:id
 
 localhost:5000/exercises/stretch
+localhost:5000/exercises/stretch/:id
 localhost:5000/exercises/stretch/add
-localhost:5000/exercises/stretch/update
+localhost:5000/exercises/stretch/update/:id
 
 localhost:5000/exercises/balance
+localhost:5000/exercises/balance/:id
 localhost:5000/exercises/balance/add
-localhost:5000/exercises/balance/update
+localhost:5000/exercises/balance/update/:id
 
 
 
