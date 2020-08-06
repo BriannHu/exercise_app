@@ -2,14 +2,14 @@ const router = require('express').Router();
 let AerobicExercise = require('../../models/exercise_types/aerobic.model');
 
 // default view
-router.route('/aerobic').get((req, res) => {
+router.route('/').get((req, res) => {
     AerobicExercise.find()
     .then(aerobic_exercises => res.json(aerobic_exercises))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 // add new exercise
-router.route('/aerobic/add').post((req, res) => {
+router.route('/add').post((req, res) => {
     const username = req.body.username;
     const activity = req.body.activity;
     const duration = Number(req.body.duration);
@@ -27,16 +27,23 @@ router.route('/aerobic/add').post((req, res) => {
 });
 
 // view specific exercise
-router.route('/aerobic/:id').get((req, res) => {
+router.route('/:id').get((req, res) => {
     AerobicExercise.findById(req.params.id)
     .then(aerobic_exercise => res.json(aerobic_exercise))
     .catch(err => res.json('Error: ' + err));
 });
 
+// delete specific exercise
+router.route('/:id').delete((req, res) => {
+    AerobicExercise.findByIdAndDelete(req.params.id)
+    .then(aerobic_exercise => res.json('Exercise deleted'))
+    .catch(err => res.json('Error: ' + err));
+});
+
 // update specific exercise
-router.route('/aerobic/update/:id').post((req, res) => {
+router.route('/update/:id').post((req, res) => {
     AerobicExercise.findById(req.params.id)
-    .then(exercise => {
+    .then(aerobic_exercise => {
         aerobic_exercise.username = req.body.username;
         aerobic_exercise.activity = req.body.activity;
         aerobic_exercise.duration = Number(req.body.duration);

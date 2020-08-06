@@ -20,10 +20,12 @@ mongoose.connect(URI, {
     console.log(`DB Connection Error: ${err.message}`);
 });
 
-const exercisesRouter = require('./routes/exercises')
+const aerobicExerciseRouter = require('./routes/exercise_types/aerobic')
 const usersRouter = require('./routes/users')
+const exercisesRouter = require('./routes/exercises')
 
-app.use('/exercises', exercisesRouter);
+//app.use('/exercises', exercisesRouter);
+app.use('/exercises/aerobic', aerobicExerciseRouter);
 app.use('/users', usersRouter);
 
 app.listen(PORT, () => {
