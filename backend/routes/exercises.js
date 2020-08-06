@@ -1,4 +1,4 @@
-const router = require('express').Router()
+const router = require('express').Router();
 let Exercise = require('../models/exercise.model');
 
 // default view
@@ -16,10 +16,7 @@ router.route('/add').post((req, res) => {
     const date = Date.parse(req.body.date);
 
     const newExercise = new Exercise({
-        username,
-        description,
-        duration,
-        date,
+        username, description, duration, date
     });
 
     newExercise.save()
